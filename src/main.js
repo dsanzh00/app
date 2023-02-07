@@ -7,4 +7,7 @@ import '@/assets/bootstrap.bundle.min.js'
 import "material-icons/iconfont/material-icons.css"
 import "@/assets/custom_style.css"
 
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
 createApp(App).use(store).use(router).mount('#app')

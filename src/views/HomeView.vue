@@ -12,18 +12,23 @@
       <div class="col-lg-6">
         <card-comp :btns="btnArray" class="mx-auto card-comp">
           <template #default>
-            <form>
+            <form >
             <div class="mb-3 mt-2">
               <input 
               type="email" 
-              class="form-control" 
-              placeholder="Correo electrónico">
+              class="form-control"
+              id="mail" 
+              placeholder="Correo electrónico"
+              v-model="email">
+              
             </div>
             <div class="mb-3 mt-2">
               <input 
               type="password" 
               class="form-control" 
-              placeholder="Contraseña">
+              id="pass"
+              placeholder="Contraseña"
+              v-model="password">
             </div>
           </form>
           </template>
@@ -36,7 +41,7 @@
 
 <script>
 import CardComp from "../components/CardComp.vue"
-
+import axios from 'axios'
 
 export default {
   name: 'HomeView',
@@ -50,11 +55,37 @@ export default {
         {
         txt: 'Iniciar Sesión',
         class: 'btn-secondary',
+        
         },
       ]
       
     }
+  },
+  methods: {
+    iniciarSesion(){
+      event.preventDefault();
+      /*if(this.email.trim() === ''){
+        alert('Escribe un correo electrónico');
+      }else if(this.password.trim() === ''){
+        alert('Escribe un correo electrónico');
+      }else{
+        var params = {email: this.email.trim(), password: this.password.trim()}
+        axios.post('https://app.konfuzio.com/api/v3/auth/', new URLSearchParams({
+            'username': 'dsanzh00@estudiantes.unileon.es',
+            'password': 'tfg12345'})).then(
+              result => {
+                var token = result.data.token;
+              }
+            );
+        if(token === 200){
+          alert("Correcto")
+        }
+      }*/
+
+      alert('hola')
+    }
   }
+  
 }
 </script>
 

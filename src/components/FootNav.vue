@@ -8,9 +8,10 @@
         <li class="list-group-item">
             <router-link class="router-link" to="/about">About</router-link>
         </li>
-        <li class="list-group-item">
-            <router-link class="router-link" to="/posts">Post</router-link>
-        </li>
+        <!-- <li class="list-group-item">
+            <router-link class="router-link" to="/documents">Documents</router-link>
+        </li> -->
+        
     </ul>
     <img src="../assets/img/escudo-txtderecha.jpg" alt="logo uni" />
     <div class="text-black-50 text-center">Dr Writing &#169; 2023</div>
